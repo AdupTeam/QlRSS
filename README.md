@@ -3,8 +3,11 @@ QlRSS
 
 Insane RSS reader
 
+If you want to edit this file please use markdown syntax
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
+
 ----------------
-Tools needed:
+#### Tools needed:
 
 1. Java 7 http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp
 
@@ -17,20 +20,19 @@ Tools needed:
 5. Tomcat
 
 ----------------
-Use Maven
+### Use Maven
 
 1. Open terminal
 
 2. Navigate to: $project_src/QlRSS/Main
-
-Testing
+ 
+#### Testing
 
 1. mvn clean test
 
 2. Add, brake, play with tests and see results
 
-//in progress
-Deploing to local tomcat server 
+#### //in progress Deploying to local Tomcat server 
 
 1. Enable Tomcat users http://www.mkyong.com/tomcat/tomcat-default-administrator-password/
 
