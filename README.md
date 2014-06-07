@@ -17,7 +17,7 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 
 4. Git http://git-scm.com/downloads
 
-5. Tomcat
+5. Tomcat - only for local deploy without Maven
 
 ----------------
 ### Use Maven
@@ -32,7 +32,12 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 
 2. Add, brake, play with tests and see results
 
-#### //in progress Deploying to local Tomcat server 
+3. You can run app on maven automatically installed Tomcat - just run:
+```
+mvn clean install tomcat:run 
+```
+
+#### Deploying to local Tomcat server 
 
 1. Enable Tomcat users http://www.mkyong.com/tomcat/tomcat-default-administrator-password/
 
@@ -44,6 +49,18 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 		<password>tomcat</password> 
 	</server>
 ```  
-You can run app on Tomcat: mvn clean install tomcat:run
+Add created jar/war files to Tomcat via localhost:8080\manager
 
 Navigate to http://localhost:8080/Main/
+
+----------------------
+###Using Jenkins 
+App can be checked under url: https://qlrss-ijo.rhcloud.com/
+
+Jenkins - https://jenkins-ijo.rhcloud.com/ user: a  and pass: abbreviation of lecture name 
+
+Everytime you commit changes to GitHub master branch then application is builded on Jenkins CI server - if everything is fine then is deployed under ttps://qlrss-ijo.rhcloud.com/
+
+----------------------
+### Using IntelliJ
+TODO
