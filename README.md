@@ -108,6 +108,8 @@ App can be checked under url: https://qlrss-ijo.rhcloud.com/
 
 Jenkins - https://jenkins-ijo.rhcloud.com/ user: a  and pass: abbreviation of lecture name 
 
-Everytime you commit changes to GitHub master branch then application is builded on Jenkins CI server - if everything is fine then is deployed under ttps://qlrss-ijo.rhcloud.com/
+In progress:
+
+Every time you commit changes to GitHub master branch then application is builded on Jenkins CI server - if everything is fine then is deployed under ttps://qlrss-ijo.rhcloud.com/
 
 
