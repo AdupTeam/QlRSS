@@ -19,8 +19,57 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 
 5. Tomcat - only for local deploy without Maven
 
+------------------------
+### GIT
+After installing GIT - default install option should be enough
+Create folder for project
+Open GitBash terminal and run
+```
+git clone https://github.com/AdupTeam/QlRSS
+```
+Always do before making changes 
+```
+git pull
+```
+Do changes - when you finish - add changes to stage
+```
+git add -A
+```
+To avoid conflicts 
+```
+git stash save "my changes description"
+git pull
+git stash apply
+```
+Commit changes 
+```
+git commit -m "my changes description"
+```
+Push changes to repository
+```
+git push
+```
+You should see your changes on GitHub 
+
+----------------------
+### Using IntelliJ
+Open IntelliJ
+
+1. Use Import Project 
+  * http://www.particlewave.com/wordpress/wp-content/uploads/2013/05/CaptureJUnit.jpg
+  * or go to File->Import Project...
+  * choose directory of your project
+  * choose maven http://1.bp.blogspot.com/-TEKdt2YI1LY/US32FWVXDsI/AAAAAAAAAiU/OmjRf36MAFI/s1600/Screenshot+from+2013-02-27+06:40:35.png
+http://2.bp.blogspot.com/-WbOLOpQmAkk/US32pZZSBuI/AAAAAAAAAis/miPdVGzGWXA/s1600/Screenshot+from+2013-02-27+06:40:53.png
+  * click next, and again next, do not tick openshift profile
+  * click next, when SDK window appear add JDK http://2.bp.blogspot.com/-WbOLOpQmAkk/US32pZZSBuI/AAAAAAAAAis/miPdVGzGWXA/s1600/Screenshot+from+2013-02-27+06:40:53.png
+  * click next and use finish option
+  * if you spot message about Maven then enable Auto Import (right uper corner
+http://2.bp.blogspot.com/-J-Jwp7ANMbQ/US34FhuL4FI/AAAAAAAAAjI/hPuwlfBNd7c/s1600/Screenshot+from+2013-02-27+06:41:45.png)
+2. If some problems appear you can always go to File->Project Structure and find what errors are presented in submenus of Project Setting menu
+
 ----------------
-### Use Maven
+### Using Maven
 
 1. Open terminal
 
@@ -61,6 +110,4 @@ Jenkins - https://jenkins-ijo.rhcloud.com/ user: a  and pass: abbreviation of le
 
 Everytime you commit changes to GitHub master branch then application is builded on Jenkins CI server - if everything is fine then is deployed under ttps://qlrss-ijo.rhcloud.com/
 
-----------------------
-### Using IntelliJ
-TODO
+
