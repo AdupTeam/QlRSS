@@ -24,4 +24,10 @@ public class CalculatorTest {
         calculator.add(0, 0);
         assertEquals("Incorrect addition", 0, calculator.getResult());
     }
+
+    @Test
+    public void testAddOver9000() throws Exception {
+        calculator.add(9000, 1);
+        assertEquals("Incorrect addition", 9001, calculator.getResult());
+    }
 }
