@@ -18,4 +18,10 @@ public class CalculatorTest {
         calculator.add(1, 2);
         assertEquals("Incorrect addition", 3, calculator.getResult());
     }
+
+    @Test
+    public void testAddZero() throws Exception {
+        calculator.add(0, 0);
+        assertEquals("Incorrect addition", 0, calculator.getResult());
+    }
 }
