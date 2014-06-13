@@ -3,12 +3,10 @@
 
 <html>
 <body>
-<h2>Super Example Calc</h2>
-lol Jenkins automatically build it :)
+<h2>Feed</h2>
 
-<form action="result.jsp">
-    number1: <input type="text" name="number1"><br/>
-    number2: <input type="text" name="number2"><br/>
+<form action="rfeed.jsp">
+    Feed URL: <input type="text" name="feed"><br/>
     <input type="submit"/>
 </form>
 </body>
