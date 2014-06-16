@@ -3,9 +3,10 @@
 <%@ page import="RSS.RSSFeedParser" %>
 <%@ page import="RSS.FeedMessage" %>
 <%@ page import="RSS.Feed" %>
+<%@ page import="RSS.GoogleMail" %>
 <html>
 <body>
-<h2>Super Example Calc</h2>
+<h2>RSS SUPER READER</h2>
 
 </body>
 <%
@@ -13,8 +14,14 @@ RSSFeedParser parser = new RSSFeedParser(request.getParameter("feed"));
         Feed feed = parser.readFeed();
         String feedAll = "";
         for (FeedMessage message : feed.getMessages()) {
-            feedAll += message + "<br />";
+            feedAll += message;
         }
+
+        GoogleMail.Send("informatykainzynierska",
+                        "taradejnamusiodejsc",
+                        "TU WPISAC DOWOLNY ADRES@gmail.com",
+                        "RSS Feeds for breakfast",
+                        feedAll);
 %>
-<p>Result: <%=feedAll%></p>
+<p style="color: #008800">Email with rss feeds has been sent to the recipient.</p>
 </html>

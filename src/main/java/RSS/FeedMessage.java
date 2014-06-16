@@ -53,8 +53,14 @@ public class FeedMessage {
 
     @Override
     public String toString() {
-        return "FeedMessage [title=" + title + ", description=" + description
-                + ", link=" + link + ", author=" + author + ", guid=" + guid
-                + "]";
+        String auth;
+
+        if (author != "") {
+            auth = " (" + author + ")";
+        } else {
+            auth = "";
+        }
+        return title + auth + "\n" + description
+                + "\n" + link + "\n\n";
     }
 }
