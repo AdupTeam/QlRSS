@@ -75,11 +75,12 @@ RSSFeedParser parser = new RSSFeedParser(request.getParameter("feed"));
             feedAll += message;
         }
 
-        GoogleMail.Send("informatykainzynierska",
-                        "taradejnamusiodejsc",
-                        "salaaaam+test@gmail.com",
+        GoogleMail.Send(request.getParameter("username"),
+                        request.getParameter("password"),
+                        request.getParameter("email"),
                         "RSS Feeds for breakfast",
                         feedAll);
+
 
       out.write("\r\n");
       out.write("<p style=\"color: #008800\">Email with rss feeds has been sent to the recipient.</p>\r\n");

@@ -4,7 +4,7 @@
 <html>
 <head>
     <style>
-        td {
+        td, h2 {
             padding: 5px;
             display:table-cell;
             vertical-align:middle;
@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-<h2>RSS SUPER READER</h2>
+<h2> RSS SUPER READER</h2>
 
 <form action="rfeed.jsp">
     <table>
@@ -22,10 +22,13 @@
                 <td>Feed Url</td>
                 <td><input type="text" name="feed" value="http://rss.cnn.com/rss/edition.rss" style="width: 500px;height:2em"></td>
             </tr>
+
+            <!-- Useless
             <tr>
                 <td>SMTP Server: </td>
                 <td><input type="text" name="server" value="smtp.gmail.com" style="width: 500px;height:2em"></td>
             </tr>
+            -->
             <tr>
                 <td>Send to: </td>
                 <td><input type="text" name="email" placeholder="username@domain.com" style="width: 500px;height:2em"> </td>

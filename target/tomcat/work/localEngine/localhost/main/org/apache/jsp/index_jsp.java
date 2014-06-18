@@ -57,7 +57,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <style>\r\n");
-      out.write("        td {\r\n");
+      out.write("        td, h2 {\r\n");
       out.write("            padding: 5px;\r\n");
       out.write("            display:table-cell;\r\n");
       out.write("            vertical-align:middle;\r\n");
@@ -66,7 +66,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("<h2>RSS SUPER READER</h2>\r\n");
+      out.write("<h2> RSS SUPER READER</h2>\r\n");
       out.write("\r\n");
       out.write("<form action=\"rfeed.jsp\">\r\n");
       out.write("    <table>\r\n");
@@ -75,10 +75,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <td>Feed Url</td>\r\n");
       out.write("                <td><input type=\"text\" name=\"feed\" value=\"http://rss.cnn.com/rss/edition.rss\" style=\"width: 500px;height:2em\"></td>\r\n");
       out.write("            </tr>\r\n");
+      out.write("\r\n");
+      out.write("            <!-- Useless\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td>SMTP Server: </td>\r\n");
       out.write("                <td><input type=\"text\" name=\"server\" value=\"smtp.gmail.com\" style=\"width: 500px;height:2em\"></td>\r\n");
       out.write("            </tr>\r\n");
+      out.write("            -->\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td>Send to: </td>\r\n");
       out.write("                <td><input type=\"text\" name=\"email\" placeholder=\"username@domain.com\" style=\"width: 500px;height:2em\"> </td>\r\n");
