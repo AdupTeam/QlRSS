@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -57,7 +57,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <style>\r\n");
-      out.write("        td, h2 {\r\n");
+      out.write("        td, h2, h3 {\r\n");
       out.write("            padding: 5px;\r\n");
       out.write("            display:table-cell;\r\n");
       out.write("            vertical-align:middle;\r\n");
@@ -66,33 +66,18 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("<h2> RSS SUPER READER <small><a href=\"rss_config.jsp\" style=\"text-decoration:none; color: #AAA\">/ manage sources </a> </small></h2>\r\n");
-      out.write("<br>\r\n");
-      out.write("<form action=\"rfeed.jsp\">\r\n");
+      out.write("<h2> RSS CONFIG</h2>\r\n");
+      out.write("\r\n");
+      out.write("<form action=\"remove_rss.jsp\">\r\n");
       out.write("    <table>\r\n");
       out.write("        <tbody>\r\n");
       out.write("            <tr>\r\n");
-      out.write("                <td>Feed Url</td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"feed\" value=\"http://rss.cnn.com/rss/edition.rss\" style=\"width: 500px;height:2em\"></td>\r\n");
-      out.write("            </tr>\r\n");
-      out.write("\r\n");
-      out.write("            <!-- Useless\r\n");
-      out.write("            <tr>\r\n");
-      out.write("                <td>SMTP Server: </td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"server\" value=\"smtp.gmail.com\" style=\"width: 500px;height:2em\"></td>\r\n");
-      out.write("            </tr>\r\n");
-      out.write("            -->\r\n");
-      out.write("            <tr>\r\n");
-      out.write("                <td>Send to: </td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"email\" placeholder=\"username@domain.com\" style=\"width: 500px;height:2em\"> </td>\r\n");
+      out.write("                <td>Add rss</td>\r\n");
+      out.write("                <td><input type=\"text\" name=\"rss_link\" placeholder=\"http://rss.cnn.com/rss/edition.rss\" style=\"width: 500px;height:2em\"></td>\r\n");
       out.write("            </tr>\r\n");
       out.write("            <tr>\r\n");
-      out.write("                <td>Send from: </td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"username\" placeholder=\"username\" style=\"width: 250px;height:2em\"> @gmail.com</td>\r\n");
-      out.write("            </tr>\r\n");
-      out.write("            <tr>\r\n");
-      out.write("                <td>Password: </td>\r\n");
-      out.write("                <td><input type=\"password\" name=\"password\" placeholder=\"password\" style=\"width: 250px;height:2em\"></td>\r\n");
+      out.write("                <td>Remove rss with id: </td>\r\n");
+      out.write("                <td><input type=\"text\" name=\"id\" placeholder=\"0\" style=\"width: 500px;height:2em\"> </td>\r\n");
       out.write("            </tr>\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td><input type=\"submit\" value=\"Send RSS feeds\"/></td>\r\n");
@@ -103,6 +88,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</form>\r\n");
       out.write("<br>\r\n");
       out.write("\r\n");
+      out.write("<h3> LIST OF CURRENT RSS SOURCES </h3>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");

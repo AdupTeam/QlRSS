@@ -13,8 +13,8 @@
     </style>
 </head>
 <body>
-<h2> RSS SUPER READER</h2>
-
+<h2> RSS SUPER READER <small><a href="rss_config.jsp" style="text-decoration:none; color: #AAA">/ manage sources </a> </small></h2>
+<br>
 <form action="rfeed.jsp">
     <table>
         <tbody>
