@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 import java.io.PrintWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.File;
+import java.io.FileReader;
 
 public class RSSConfig {
     String config_file = "rss_config.txt";
@@ -77,7 +79,30 @@ public class RSSConfig {
     }
 
     public void removeSource( int id ){
+        File inputFile = new File(config_file);
+        File tempFile = new File("tmp.txt");
 
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+            int line_index = 0;
+            String currentLine;
+
+            while((currentLine = reader.readLine()) != null) {
+                if ( line_index == id ){
+                    continue;
+                }
+                writer.write(currentLine);
+            }
+            writer.close();
+            reader.close();
+
+            boolean successful = tempFile.renameTo(inputFile);
+        }
+        catch (IOException ex ){
+            System.out.println("Oups. Exception in remove source method. - Very informative.. I know.");
+        }
     }
 
     public String print(){
