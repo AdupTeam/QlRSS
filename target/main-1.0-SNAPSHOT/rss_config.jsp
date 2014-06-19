@@ -50,20 +50,24 @@
     List<String> list = rss.get_list();
 
 %>
+
+<% for (int i=0;i<list.size();i++)
+          {
+
+              out.println(list.get(i));
+
+          } %>
+
+<c:forEach items="${list}" var="item">
+    ${item}<br>
+</c:forEach>
 <table>
-
-<%
-    for (int i=0;i<list.size();i++){
-        out.println("<tr>");
-        out.println("<td>" + i + "</td>");
-        out.println("<td>" + list.get(i) + "</td>");
-        out.println("</tr>");
-    }
-%>
+  <c:forEach items="${list}" var="item">
+    <tr>
+      <td><c:out value="${item}" /></td>
+    </tr>
+  </c:forEach>
 </table>
-
-
-
 
 </body>
 </html>

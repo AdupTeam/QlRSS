@@ -4,6 +4,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.*;
+import java.text.*;
+import RSS.RSSFeedParser;
+import RSS.FeedMessage;
+import RSS.Feed;
+import RSS.GoogleMail;
+import RSS.RSSConfig;
 
 public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -54,6 +60,12 @@ public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <style>\r\n");
@@ -89,6 +101,30 @@ public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("<br>\r\n");
       out.write("\r\n");
       out.write("<h3> LIST OF CURRENT RSS SOURCES </h3>\r\n");
+
+    RSSConfig rss = new RSSConfig();
+    rss.load_config();
+    rss.print_config();
+
+    List<String> list = rss.get_list();
+
+
+      out.write("\r\n");
+      out.write("<table>\r\n");
+      out.write("\r\n");
+
+    for (int i=0;i<list.size();i++){
+        out.println("<tr>");
+        out.println("<td>" + i + "</td>");
+        out.println("<td>" + list.get(i) + "</td>");
+        out.println("</tr>");
+    }
+
+      out.write("\r\n");
+      out.write("</table>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
