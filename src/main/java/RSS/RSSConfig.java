@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.FileReader;
 
 
+
 public class RSSConfig {
     String config_file = "rss_config.txt";
     List<String> config = new ArrayList<String>();
@@ -66,6 +67,7 @@ public class RSSConfig {
         for (int i = 0; i < config.size(); i++){
             System.out.println(config.get(i));
         }
+
 
         return config;
     }
