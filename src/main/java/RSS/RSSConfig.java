@@ -99,7 +99,9 @@ public class RSSConfig {
                     continue;
                 }
                 line_index++;
-                writer.write("\r\n" + currentLine);
+                if (currentLine.length() > 5){
+                    writer.write("\r\n" + currentLine);
+                }
             }
             writer.close();
             reader.close();

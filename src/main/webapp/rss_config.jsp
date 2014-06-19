@@ -60,7 +60,7 @@
 <%
     for (int i=0;i<list.size();i++){
         out.println("<tr>");
-        out.println("<td class='with_borders'>" + i + "</td>");
+        out.println("<td class='with_borders'>" + (i+1) + "</td>");
         out.println("<td class='with_borders'>" + list.get(i) + "</td>");
         out.println("</tr>");
     }

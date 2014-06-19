@@ -1,17 +1,12 @@
 
-
-http://feeds.wired.com/wired27b
-http://feeds.feedburner.com/sekurak
 https://www.schneier.com/blog/atom.xml
 http://feeds.feedburner.com/krebsonsecurity?format=xml
 http://haxite.org/rss_view.php?kanal=newsy
 http://feeds.feedburner.com/certpolska?format=xml
-http://seclists.org/rss/fulldisclosure.rss
-http://seclists.org/rss/bugtraq.rss
 http://seclists.org/rss/pen-test.rss
 http://seclists.org/rss/basics.rss
 http://seclists.org/rss/dailydave.rss
 https://news.ycombinator.com/rss
 http://seclists.org/rss/pen-test2.rss
-
 http://seclists.org/rss/pen-test3.rss
+http://seclists.org/rss/pen-test4.rss
