@@ -66,6 +66,7 @@ public class RSSConfig {
         for (int i = 0; i < config.size(); i++){
             System.out.println(config.get(i));
         }
+
         return config;
     }
 

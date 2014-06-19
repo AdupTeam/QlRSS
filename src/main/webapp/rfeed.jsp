@@ -7,11 +7,18 @@
 
 </body>
 <%
-RSSFeedParser parser = new RSSFeedParser(request.getParameter("feed"));
-        Feed feed = parser.readFeed();
         String feedAll = "";
-        for (FeedMessage message : feed.getMessages()) {
-            feedAll += message;
+        RSSConfig rssconf = new RSSConfig();
+        rssconf.loadConfig();
+
+        List<String> list = rssconf.getList();
+
+        for (int i = 0; i < list.size(); i++){
+            RSSFeedParser parser = new RSSFeedParser(list.get(i));
+            Feed feed = parser.readFeed();
+            for (FeedMessage message : feed.getMessages()) {
+                feedAll += message;
+            }
         }
 
         SendMail.send(request.getParameter("username"),

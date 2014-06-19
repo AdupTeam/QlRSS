@@ -18,12 +18,12 @@
 <form action="rfeed.jsp">
     <table>
         <tbody>
+            <!-- Useless
+
             <tr>
                 <td>Feed Url</td>
                 <td><input type="text" name="feed" value="http://rss.cnn.com/rss/edition.rss" style="width: 500px;height:2em"></td>
             </tr>
-
-            <!-- Useless
             <tr>
                 <td>SMTP Server: </td>
                 <td><input type="text" name="server" value="smtp.gmail.com" style="width: 500px;height:2em"></td>

@@ -5,7 +5,3 @@ http://feeds.feedburner.com/certpolska?format=xml
 http://seclists.org/rss/pen-test.rss
 http://seclists.org/rss/basics.rss
 http://seclists.org/rss/dailydave.rss
-https://news.ycombinator.com/rss
-http://seclists.org/rss/pen-test2.rss
-http://seclists.org/rss/pen-test3.rss
-http://seclists.org/rss/basics2.rss
