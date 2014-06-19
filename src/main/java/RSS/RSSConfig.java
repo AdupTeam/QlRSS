@@ -70,6 +70,7 @@ public class RSSConfig {
         try {
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(config_file, true)));
             out.println(source);
+            out.close();
         }catch (IOException e) {
             System.out.println("Oups. Exception while adding new RSS source to file.");
         }
