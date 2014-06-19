@@ -11,6 +11,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class RSSConfig {
     String config_file = "rss_config.txt";
@@ -61,6 +64,19 @@ public class RSSConfig {
             System.out.println(config.get(i));
         }
         return config;
+    }
+
+    public void addSource( String source ){
+        try {
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(config_file, true)));
+            out.println(source);
+        }catch (IOException e) {
+            System.out.println("Oups. Exception while adding new RSS source to file.");
+        }
+    }
+
+    public void removeSource( int id ){
+
     }
 
     public String print(){
