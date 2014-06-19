@@ -85,6 +85,10 @@ http://2.bp.blogspot.com/-J-Jwp7ANMbQ/US34FhuL4FI/AAAAAAAAAjI/hPuwlfBNd7c/s1600/
 ```
 mvn clean install tomcat:run 
 ```
+4. Production server is JBoss 7 - checking if everything is working on this server run:
+```
+mvn clean install org.jboss.as.plugins:jboss-as-maven-plugin:7.5.Final:run -Dusername=lol -Dpassword=lol
+```
 
 #### Deploying to local Tomcat server 
 
