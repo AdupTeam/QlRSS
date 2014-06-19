@@ -87,7 +87,7 @@ mvn clean install tomcat:run
 ```
 4. Production server is JBoss 7 - checking if everything is working on this server run:
 ```
-mvn clean install org.jboss.as.plugins:jboss-as-maven-plugin:7.5.Final:run -Dusername=lol -Dpassword=lol
+mvn clean install org.jboss.as.plugins:jboss-as-maven-plugin:7.5.Final:run
 ```
 And application can be found: http://127.0.0.1:8080/main-1.0-SNAPSHOT/
 
