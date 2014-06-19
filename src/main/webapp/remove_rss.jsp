@@ -4,15 +4,14 @@
 <html>
 <meta http-equiv="refresh" content="3;URL='rss_config.jsp'" />
 <body>
-<h2>RSS SUPER READER <small>removing source</small></h2>
+<h2>RSS SUPER READER <small style="color: #AAA">/ removing source</small></h2>
 
 </body>
 <%
-int id = Integer.parseInt( request.getParameter("id") );
-System.out.println(id);
-RSSConfig rss = new RSSConfig();
-rss.removeSource(id);
-
+    int id = Integer.parseInt( request.getParameter("id") );
+    System.out.println(id);
+    RSSConfig rss = new RSSConfig();
+    rss.removeSource(id);
 %>
 <p style="color: #008800">Specified RSS source has been removed</p>
 </html>

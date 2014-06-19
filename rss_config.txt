@@ -8,5 +8,4 @@ http://seclists.org/rss/dailydave.rss
 https://news.ycombinator.com/rss
 http://seclists.org/rss/pen-test2.rss
 http://seclists.org/rss/pen-test3.rss
-http://seclists.org/rss/pen-test4.rss
 http://seclists.org/rss/basics2.rss
