@@ -1,9 +1,6 @@
 <%@ page language="java" import="java.util.*" %>
 <%@ page import="java.text.*" %>
-<%@ page import="RSS.RSSFeedParser" %>
-<%@ page import="RSS.FeedMessage" %>
-<%@ page import="RSS.Feed" %>
-<%@ page import="RSS.GoogleMail" %>
+<%@ page import="RSS.*" %>
 <html>
 <body>
 <h2>RSS SUPER READER</h2>
@@ -17,11 +14,11 @@ RSSFeedParser parser = new RSSFeedParser(request.getParameter("feed"));
             feedAll += message;
         }
 
-        GoogleMail.Send(request.getParameter("username"),
-                        request.getParameter("password"),
-                        request.getParameter("email"),
-                        "RSS Feeds for breakfast",
-                        feedAll);
+        SendMail.send(request.getParameter("username"),
+                request.getParameter("password"),
+                request.getParameter("email"),
+                "RSS Feeds for breakfast",
+                feedAll);
 
 %>
 <p style="color: #008800">Email with rss feeds has been sent to the recipient.</p>
