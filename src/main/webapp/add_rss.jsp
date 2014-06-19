@@ -3,11 +3,14 @@
 <%@ page import="RSS.*" %>
 <html>
 <body>
-<h2>RSS SUPER READER</h2>
+<h2>RSS SUPER READER <small>adding new source</small></h2>
 
 </body>
 <%
-
+String source = request.getParameter("rss_source");
+System.out.println(source);
+RSSConfig rss = new RSSConfig();
+rss.addSource(source);
 %>
-<p style="color: #008800">Email with rss feeds has been sent to the recipient.</p>
+<p style="color: #008800">New RSS source has been added.</p>
 </html>

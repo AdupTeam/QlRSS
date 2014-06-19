@@ -7,8 +7,11 @@
 
 </body>
 <%
-
+int id = Integer.parseInt( request.getParameter("id") );
+System.out.println(id);
+RSSConfig rss = new RSSConfig();
+rss.removeSource(id);
 
 %>
-<p style="color: #008800">Email with rss feeds has been sent to the recipient.</p>
+<p style="color: #008800">Specified RSS source has been removed</p>
 </html>

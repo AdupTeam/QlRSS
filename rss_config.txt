@@ -1,6 +1,5 @@
 
-http://feeds.feedburner.com/ZaufanaTrzeciaStronaGlowna
-http://feeds.feedburner.com/niebezpiecznik/
+
 http://feeds.wired.com/wired27b
 http://feeds.feedburner.com/sekurak
 https://www.schneier.com/blog/atom.xml
@@ -13,3 +12,6 @@ http://seclists.org/rss/pen-test.rss
 http://seclists.org/rss/basics.rss
 http://seclists.org/rss/dailydave.rss
 https://news.ycombinator.com/rss
+http://seclists.org/rss/pen-test2.rss
+
+http://seclists.org/rss/pen-test3.rss

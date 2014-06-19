@@ -30,7 +30,7 @@
             <tr>
                 <form action="add_rss.jsp">
                 <td>Add rss</td>
-                <td><input type="text" name="rss_link" placeholder="http://rss.cnn.com/rss/edition.rss" style="width: 250px;height:2em"> <input type="submit" value="Add"/> </td>
+                <td><input type="text" name="rss_source" placeholder="http://rss.cnn.com/rss/edition.rss" style="width: 250px;height:2em"> <input type="submit" value="Add"/> </td>
                 </form>
             </tr>
             <tr>

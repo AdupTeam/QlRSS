@@ -17,6 +17,7 @@ import java.io.FileWriter;
 import java.io.File;
 import java.io.FileReader;
 
+
 public class RSSConfig {
     String config_file = "rss_config.txt";
     List<String> config = new ArrayList<String>();
@@ -70,8 +71,11 @@ public class RSSConfig {
 
     public void addSource( String source ){
         try {
+            System.out.println("Writing a new source");
+            System.out.println(source);
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(config_file, true)));
-            out.println(source);
+
+            out.println("\r\n" + source);
             out.close();
         }catch (IOException e) {
             System.out.println("Oups. Exception while adding new RSS source to file.");
@@ -91,14 +95,24 @@ public class RSSConfig {
 
             while((currentLine = reader.readLine()) != null) {
                 if ( line_index == id ){
+                    line_index++;
                     continue;
                 }
-                writer.write(currentLine);
+                line_index++;
+                writer.write("\r\n" + currentLine);
             }
             writer.close();
             reader.close();
 
+            if(inputFile.delete()){
+                System.out.println(inputFile.getName() + " is deleted!");
+            }else{
+                System.out.println("Delete operation failed.");
+            }
             boolean successful = tempFile.renameTo(inputFile);
+            if (!successful) {
+                System.out.println("Rename operation failed.");
+            }
         }
         catch (IOException ex ){
             System.out.println("Oups. Exception in remove source method. - Very informative.. I know.");
