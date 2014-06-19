@@ -16,6 +16,9 @@
             vertical-align:middle;
             font-family:"Verdana",Sans-Serif;
         }
+        .with_borders {
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -26,14 +29,11 @@
         <tbody>
             <tr>
                 <td>Add rss</td>
-                <td><input type="text" name="rss_link" placeholder="http://rss.cnn.com/rss/edition.rss" style="width: 500px;height:2em"></td>
+                <td><input type="text" name="rss_link" placeholder="http://rss.cnn.com/rss/edition.rss" style="width: 250px;height:2em"> <input type="submit" value="Add"/> </td>
             </tr>
             <tr>
                 <td>Remove rss with id: </td>
-                <td><input type="text" name="id" placeholder="0" style="width: 500px;height:2em"> </td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Send RSS feeds"/></td>
+                <td><input type="text" name="id" placeholder="0" style="width: 250px;height:2em"> <input type="submit" value="Remove"/> </td>
             </tr>
 
         </tbody>
@@ -51,12 +51,15 @@
 
 %>
 <table>
-
+    <tr>
+        <th class="with_borders"> # </th>
+        <th class="with_borders"> Source </th>
+    </tr>
 <%
     for (int i=0;i<list.size();i++){
         out.println("<tr>");
-        out.println("<td>" + i + "</td>");
-        out.println("<td>" + list.get(i) + "</td>");
+        out.println("<td class='with_borders'>" + i + "</td>");
+        out.println("<td class='with_borders'>" + list.get(i) + "</td>");
         out.println("</tr>");
     }
 %>

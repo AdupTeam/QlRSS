@@ -75,6 +75,9 @@ public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("            vertical-align:middle;\r\n");
       out.write("            font-family:\"Verdana\",Sans-Serif;\r\n");
       out.write("        }\r\n");
+      out.write("        .with_borders {\r\n");
+      out.write("            border: 1px solid black;\r\n");
+      out.write("        }\r\n");
       out.write("    </style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
@@ -85,14 +88,11 @@ public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        <tbody>\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td>Add rss</td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"rss_link\" placeholder=\"http://rss.cnn.com/rss/edition.rss\" style=\"width: 500px;height:2em\"></td>\r\n");
+      out.write("                <td><input type=\"text\" name=\"rss_link\" placeholder=\"http://rss.cnn.com/rss/edition.rss\" style=\"width: 250px;height:2em\"> <input type=\"submit\" value=\"Add\"/> </td>\r\n");
       out.write("            </tr>\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td>Remove rss with id: </td>\r\n");
-      out.write("                <td><input type=\"text\" name=\"id\" placeholder=\"0\" style=\"width: 500px;height:2em\"> </td>\r\n");
-      out.write("            </tr>\r\n");
-      out.write("            <tr>\r\n");
-      out.write("                <td><input type=\"submit\" value=\"Send RSS feeds\"/></td>\r\n");
+      out.write("                <td><input type=\"text\" name=\"id\" placeholder=\"0\" style=\"width: 250px;height:2em\"> <input type=\"submit\" value=\"Remove\"/> </td>\r\n");
       out.write("            </tr>\r\n");
       out.write("\r\n");
       out.write("        </tbody>\r\n");
@@ -111,12 +111,15 @@ public final class rss_005fconfig_jsp extends org.apache.jasper.runtime.HttpJspB
 
       out.write("\r\n");
       out.write("<table>\r\n");
-      out.write("\r\n");
+      out.write("    <tr>\r\n");
+      out.write("        <th class=\"with_borders\"> # </th>\r\n");
+      out.write("        <th class=\"with_borders\"> Source </th>\r\n");
+      out.write("    </tr>\r\n");
 
     for (int i=0;i<list.size();i++){
         out.println("<tr>");
-        out.println("<td>" + i + "</td>");
-        out.println("<td>" + list.get(i) + "</td>");
+        out.println("<td class='with_borders'>" + i + "</td>");
+        out.println("<td class='with_borders'>" + list.get(i) + "</td>");
         out.println("</tr>");
     }
 
