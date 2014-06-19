@@ -1,4 +1,4 @@
 
-http://seclists.org/rss/pen-test.rss
 http://seclists.org/rss/basics.rss
 http://seclists.org/rss/dailydave.rss
+http://seclists.org/rss/pentest.rss
