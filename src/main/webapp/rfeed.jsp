@@ -39,6 +39,7 @@
             for (FeedMessage message : feed.getMessages()) {
 
                 String mydate = feed.getPubDate();
+                System.out.println(mydate);
                 SimpleDateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
                 Date date = df.parse(mydate);
                 long epoch = date.getTime();
