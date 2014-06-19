@@ -2,6 +2,7 @@
 <%@ page import="java.text.*" %>
 <%@ page import="RSS.*" %>
 <html>
+<meta http-equiv="refresh" content="3;URL='rss_config.jsp'" />
 <body>
 <h2>RSS SUPER READER <small>adding new source</small></h2>
 

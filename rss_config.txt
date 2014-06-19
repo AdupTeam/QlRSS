@@ -1,5 +1,4 @@
 
-https://www.schneier.com/blog/atom.xml
 http://feeds.feedburner.com/krebsonsecurity?format=xml
 http://haxite.org/rss_view.php?kanal=newsy
 http://feeds.feedburner.com/certpolska?format=xml
@@ -10,3 +9,4 @@ https://news.ycombinator.com/rss
 http://seclists.org/rss/pen-test2.rss
 http://seclists.org/rss/pen-test3.rss
 http://seclists.org/rss/pen-test4.rss
+http://seclists.org/rss/basics2.rss
