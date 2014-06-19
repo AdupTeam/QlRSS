@@ -13,10 +13,11 @@ import java.io.InputStreamReader;
 import java.util.logging.Logger;
 
 public class RSSConfig {
-    String config_file = "C:\\Users\\x\\Documents\\GitHub\\QlRSS\\rss_config.txt";
+    String config_file = "rss_config.txt";
     List<String> config = new ArrayList<String>();
 
     public void loadConfig(){
+
         FileInputStream file = null;
         BufferedReader reader = null;
         System.out.println("Loading file");
@@ -25,10 +26,12 @@ public class RSSConfig {
             reader = new BufferedReader(new InputStreamReader(file));
 
             String line = reader.readLine();
+            System.out.println(line);
             while(line != null){
-                System.out.println(line);
+                if (line.length() > 5){
+                    config.add(line);
+                }
                 line = reader.readLine();
-                config.add(line);
             }
         }
         catch (FileNotFoundException ex) {

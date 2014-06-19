@@ -24,21 +24,23 @@
 <body>
 <h2> RSS CONFIG</h2>
 
-<form action="remove_rss.jsp">
+
     <table>
         <tbody>
             <tr>
+                <form action="add_rss.jsp">
                 <td>Add rss</td>
                 <td><input type="text" name="rss_link" placeholder="http://rss.cnn.com/rss/edition.rss" style="width: 250px;height:2em"> <input type="submit" value="Add"/> </td>
+                </form>
             </tr>
             <tr>
+                <form action="remove_rss.jsp">
                 <td>Remove rss with id: </td>
                 <td><input type="text" name="id" placeholder="0" style="width: 250px;height:2em"> <input type="submit" value="Remove"/> </td>
+                </form>
             </tr>
-
         </tbody>
     </table>
-</form>
 <br>
 
 <h3> LIST OF CURRENT RSS SOURCES </h3>
