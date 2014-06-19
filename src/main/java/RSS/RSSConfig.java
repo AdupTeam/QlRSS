@@ -16,7 +16,7 @@ public class RSSConfig {
     String config_file = "C:\\Users\\x\\Documents\\GitHub\\QlRSS\\rss_config.txt";
     List<String> config = new ArrayList<String>();
 
-    public void load_config(){
+    public void loadConfig(){
         FileInputStream file = null;
         BufferedReader reader = null;
         System.out.println("Loading file");
@@ -47,13 +47,13 @@ public class RSSConfig {
         }
     }
 
-    public void print_config(){
+    public void printConfig(){
         for (int i = 0; i < config.size(); i++ ){
             System.out.println( config.get(i));
         }
     }
 
-    public List<String> get_list(){
+    public List<String> getList(){
         for (int i = 0; i < config.size(); i++){
             System.out.println(config.get(i));
         }

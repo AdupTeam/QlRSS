@@ -44,10 +44,10 @@
 <h3> LIST OF CURRENT RSS SOURCES </h3>
 <%
     RSSConfig rss = new RSSConfig();
-    rss.load_config();
-    rss.print_config();
+    rss.loadConfig();
+    rss.printConfig();
 
-    List<String> list = rss.get_list();
+    List<String> list = rss.getList();
 
 %>
 <table>
