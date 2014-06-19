@@ -89,6 +89,7 @@ mvn clean install tomcat:run
 ```
 mvn clean install org.jboss.as.plugins:jboss-as-maven-plugin:7.5.Final:run -Dusername=lol -Dpassword=lol
 ```
+And application can be found: http://127.0.0.1:8080/main-1.0-SNAPSHOT/
 
 #### Deploying to local Tomcat server 
 
